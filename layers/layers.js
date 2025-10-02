@@ -3,6 +3,7 @@ var wms_layers = [];
 
         var lyr_Positronnolabels_0 = new ol.layer.Tile({
             'title': 'Positron [no labels]',
+            'type':'base',
             'opacity': 1.000000,
             
             
@@ -11,139 +12,151 @@ var wms_layers = [];
                 url: 'https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'
             })
         });
-var format_place_neighbourhood_1 = new ol.format.GeoJSON();
-var features_place_neighbourhood_1 = format_place_neighbourhood_1.readFeatures(json_place_neighbourhood_1, 
+
+        var lyr_DarkMatternolabels_1 = new ol.layer.Tile({
+            'title': 'Dark Matter [no labels]',
+            'type':'base',
+            'opacity': 1.000000,
+            
+            
+            source: new ol.source.XYZ({
+            attributions: ' &nbsp &middot; <a href="https://cartodb.com/basemaps/">Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL.</a>',
+                url: 'https://a.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png'
+            })
+        });
+var format_place_neighbourhood_2 = new ol.format.GeoJSON();
+var features_place_neighbourhood_2 = format_place_neighbourhood_2.readFeatures(json_place_neighbourhood_2, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_place_neighbourhood_1 = new ol.source.Vector({
+var jsonSource_place_neighbourhood_2 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_place_neighbourhood_1.addFeatures(features_place_neighbourhood_1);
-var lyr_place_neighbourhood_1 = new ol.layer.Vector({
+jsonSource_place_neighbourhood_2.addFeatures(features_place_neighbourhood_2);
+var lyr_place_neighbourhood_2 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_place_neighbourhood_1, 
-                style: style_place_neighbourhood_1,
+                source:jsonSource_place_neighbourhood_2, 
+                style: style_place_neighbourhood_2,
                 popuplayertitle: 'place_neighbourhood',
                 interactive: false,
                 title: 'place_neighbourhood'
             });
-var format_WaterMainsLocal_2 = new ol.format.GeoJSON();
-var features_WaterMainsLocal_2 = format_WaterMainsLocal_2.readFeatures(json_WaterMainsLocal_2, 
+var format_Simple_Reduced_WaterMainsLocal_3 = new ol.format.GeoJSON();
+var features_Simple_Reduced_WaterMainsLocal_3 = format_Simple_Reduced_WaterMainsLocal_3.readFeatures(json_Simple_Reduced_WaterMainsLocal_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_WaterMainsLocal_2 = new ol.source.Vector({
+var jsonSource_Simple_Reduced_WaterMainsLocal_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_WaterMainsLocal_2.addFeatures(features_WaterMainsLocal_2);
-var lyr_WaterMainsLocal_2 = new ol.layer.Vector({
+jsonSource_Simple_Reduced_WaterMainsLocal_3.addFeatures(features_Simple_Reduced_WaterMainsLocal_3);
+var lyr_Simple_Reduced_WaterMainsLocal_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_WaterMainsLocal_2, 
-                style: style_WaterMainsLocal_2,
+                source:jsonSource_Simple_Reduced_WaterMainsLocal_3, 
+                style: style_Simple_Reduced_WaterMainsLocal_3,
                 popuplayertitle: 'Water Mains (Local)',
                 interactive: true,
     title: 'Water Mains (Local)<br />\
-    <img src="styles/legend/WaterMainsLocal_2_0.png" /> Before 1930<br />\
-    <img src="styles/legend/WaterMainsLocal_2_1.png" /> 1930 - 1940<br />\
-    <img src="styles/legend/WaterMainsLocal_2_2.png" /> 1940 - 1950<br />\
-    <img src="styles/legend/WaterMainsLocal_2_3.png" /> 1950 - 1960<br />\
-    <img src="styles/legend/WaterMainsLocal_2_4.png" /> 1960 - 1970<br />\
-    <img src="styles/legend/WaterMainsLocal_2_5.png" /> 1970 - 1980<br />\
-    <img src="styles/legend/WaterMainsLocal_2_6.png" /> 1980 - 1990<br />\
-    <img src="styles/legend/WaterMainsLocal_2_7.png" /> 1990 - 2000<br />\
-    <img src="styles/legend/WaterMainsLocal_2_8.png" /> 2000 - 2010<br />\
-    <img src="styles/legend/WaterMainsLocal_2_9.png" /> 2010 - 2020<br />\
-    <img src="styles/legend/WaterMainsLocal_2_10.png" /> 2020 - 2023<br />' });
-var format_StormPipesLocal_3 = new ol.format.GeoJSON();
-var features_StormPipesLocal_3 = format_StormPipesLocal_3.readFeatures(json_StormPipesLocal_3, 
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_0.png" /> Before 1930<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_1.png" /> 1930 - 1940<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_2.png" /> 1940 - 1950<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_3.png" /> 1950 - 1960<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_4.png" /> 1960 - 1970<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_5.png" /> 1970 - 1980<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_6.png" /> 1980 - 1990<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_7.png" /> 1990 - 2000<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_8.png" /> 2000 - 2010<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_9.png" /> 2010 - 2020<br />\
+    <img src="styles/legend/Simple_Reduced_WaterMainsLocal_3_10.png" /> 2020 - 2023<br />' });
+var format_Simple_Reduced_StormPipesLocal_4 = new ol.format.GeoJSON();
+var features_Simple_Reduced_StormPipesLocal_4 = format_Simple_Reduced_StormPipesLocal_4.readFeatures(json_Simple_Reduced_StormPipesLocal_4, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_StormPipesLocal_3 = new ol.source.Vector({
+var jsonSource_Simple_Reduced_StormPipesLocal_4 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_StormPipesLocal_3.addFeatures(features_StormPipesLocal_3);
-var lyr_StormPipesLocal_3 = new ol.layer.Vector({
+jsonSource_Simple_Reduced_StormPipesLocal_4.addFeatures(features_Simple_Reduced_StormPipesLocal_4);
+var lyr_Simple_Reduced_StormPipesLocal_4 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_StormPipesLocal_3, 
-                style: style_StormPipesLocal_3,
+                source:jsonSource_Simple_Reduced_StormPipesLocal_4, 
+                style: style_Simple_Reduced_StormPipesLocal_4,
                 popuplayertitle: 'Storm Pipes (Local)',
                 interactive: true,
     title: 'Storm Pipes (Local)<br />\
-    <img src="styles/legend/StormPipesLocal_3_0.png" /> Before 1930<br />\
-    <img src="styles/legend/StormPipesLocal_3_1.png" /> 1930 - 1940<br />\
-    <img src="styles/legend/StormPipesLocal_3_2.png" /> 1940 - 1950<br />\
-    <img src="styles/legend/StormPipesLocal_3_3.png" /> 1950 - 1960<br />\
-    <img src="styles/legend/StormPipesLocal_3_4.png" /> 1960 - 1970<br />\
-    <img src="styles/legend/StormPipesLocal_3_5.png" /> 1970 - 1980<br />\
-    <img src="styles/legend/StormPipesLocal_3_6.png" /> 1980 - 1990<br />\
-    <img src="styles/legend/StormPipesLocal_3_7.png" /> 1990 - 2000<br />\
-    <img src="styles/legend/StormPipesLocal_3_8.png" /> 2000 - 2010<br />\
-    <img src="styles/legend/StormPipesLocal_3_9.png" /> 2010 - 2020<br />\
-    <img src="styles/legend/StormPipesLocal_3_10.png" /> 2020 - 2023<br />' });
-var format_SanitaryPipesLocal_4 = new ol.format.GeoJSON();
-var features_SanitaryPipesLocal_4 = format_SanitaryPipesLocal_4.readFeatures(json_SanitaryPipesLocal_4, 
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_0.png" /> Before 1930<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_1.png" /> 1930 - 1940<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_2.png" /> 1940 - 1950<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_3.png" /> 1950 - 1960<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_4.png" /> 1960 - 1970<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_5.png" /> 1970 - 1980<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_6.png" /> 1980 - 1990<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_7.png" /> 1990 - 2000<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_8.png" /> 2000 - 2010<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_9.png" /> 2010 - 2020<br />\
+    <img src="styles/legend/Simple_Reduced_StormPipesLocal_4_10.png" /> 2020 - 2023<br />' });
+var format_Simple_Reduced_SanitaryPipesLocal_5 = new ol.format.GeoJSON();
+var features_Simple_Reduced_SanitaryPipesLocal_5 = format_Simple_Reduced_SanitaryPipesLocal_5.readFeatures(json_Simple_Reduced_SanitaryPipesLocal_5, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_SanitaryPipesLocal_4 = new ol.source.Vector({
+var jsonSource_Simple_Reduced_SanitaryPipesLocal_5 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_SanitaryPipesLocal_4.addFeatures(features_SanitaryPipesLocal_4);
-var lyr_SanitaryPipesLocal_4 = new ol.layer.Vector({
+jsonSource_Simple_Reduced_SanitaryPipesLocal_5.addFeatures(features_Simple_Reduced_SanitaryPipesLocal_5);
+var lyr_Simple_Reduced_SanitaryPipesLocal_5 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_SanitaryPipesLocal_4, 
-                style: style_SanitaryPipesLocal_4,
+                source:jsonSource_Simple_Reduced_SanitaryPipesLocal_5, 
+                style: style_Simple_Reduced_SanitaryPipesLocal_5,
                 popuplayertitle: 'Sanitary Pipes (Local)',
                 interactive: true,
     title: 'Sanitary Pipes (Local)<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_0.png" /> Before 1930<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_1.png" /> 1930 - 1940<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_2.png" /> 1940 - 1950<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_3.png" /> 1950 - 1960<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_4.png" /> 1960 - 1970<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_5.png" /> 1970 - 1980<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_6.png" /> 1980 - 1990<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_7.png" /> 1990 - 2000<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_8.png" /> 2000 - 2010<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_9.png" /> 2010 - 2020<br />\
-    <img src="styles/legend/SanitaryPipesLocal_4_10.png" /> 2020 - 2023<br />' });
-var format_CombinedPipesLocal_5 = new ol.format.GeoJSON();
-var features_CombinedPipesLocal_5 = format_CombinedPipesLocal_5.readFeatures(json_CombinedPipesLocal_5, 
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_0.png" /> Before 1930<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_1.png" /> 1930 - 1940<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_2.png" /> 1940 - 1950<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_3.png" /> 1950 - 1960<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_4.png" /> 1960 - 1970<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_5.png" /> 1970 - 1980<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_6.png" /> 1980 - 1990<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_7.png" /> 1990 - 2000<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_8.png" /> 2000 - 2010<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_9.png" /> 2010 - 2020<br />\
+    <img src="styles/legend/Simple_Reduced_SanitaryPipesLocal_5_10.png" /> 2020 - 2023<br />' });
+var format_Simple_Reduced_CombinedPipesLocal_6 = new ol.format.GeoJSON();
+var features_Simple_Reduced_CombinedPipesLocal_6 = format_Simple_Reduced_CombinedPipesLocal_6.readFeatures(json_Simple_Reduced_CombinedPipesLocal_6, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_CombinedPipesLocal_5 = new ol.source.Vector({
+var jsonSource_Simple_Reduced_CombinedPipesLocal_6 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_CombinedPipesLocal_5.addFeatures(features_CombinedPipesLocal_5);
-var lyr_CombinedPipesLocal_5 = new ol.layer.Vector({
+jsonSource_Simple_Reduced_CombinedPipesLocal_6.addFeatures(features_Simple_Reduced_CombinedPipesLocal_6);
+var lyr_Simple_Reduced_CombinedPipesLocal_6 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_CombinedPipesLocal_5, 
-                style: style_CombinedPipesLocal_5,
+                source:jsonSource_Simple_Reduced_CombinedPipesLocal_6, 
+                style: style_Simple_Reduced_CombinedPipesLocal_6,
                 popuplayertitle: 'Combined Pipes (Local)',
                 interactive: true,
     title: 'Combined Pipes (Local)<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_0.png" /> Before 1930<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_1.png" /> 1930 - 1940<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_2.png" /> 1940 - 1950<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_3.png" /> 1950 - 1960<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_4.png" /> 1960 - 1970<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_5.png" /> 1970 - 1980<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_6.png" /> 1980 - 1990<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_7.png" /> 1990 - 2000<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_8.png" /> 2000 - 2010<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_9.png" /> 2010 - 2020<br />\
-    <img src="styles/legend/CombinedPipesLocal_5_10.png" /> 2020 - 2023<br />' });
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_0.png" /> Before 1930<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_1.png" /> 1930 - 1940<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_2.png" /> 1940 - 1950<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_3.png" /> 1950 - 1960<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_4.png" /> 1960 - 1970<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_5.png" /> 1970 - 1980<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_6.png" /> 1980 - 1990<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_7.png" /> 1990 - 2000<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_8.png" /> 2000 - 2010<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_9.png" /> 2010 - 2020<br />\
+    <img src="styles/legend/Simple_Reduced_CombinedPipesLocal_6_10.png" /> 2020 - 2023<br />' });
 
-lyr_Positronnolabels_0.setVisible(true);lyr_place_neighbourhood_1.setVisible(true);lyr_WaterMainsLocal_2.setVisible(true);lyr_StormPipesLocal_3.setVisible(true);lyr_SanitaryPipesLocal_4.setVisible(true);lyr_CombinedPipesLocal_5.setVisible(true);
-var layersList = [lyr_Positronnolabels_0,lyr_place_neighbourhood_1,lyr_WaterMainsLocal_2,lyr_StormPipesLocal_3,lyr_SanitaryPipesLocal_4,lyr_CombinedPipesLocal_5];
-lyr_place_neighbourhood_1.set('fieldAliases', {'full_id': 'full_id', 'osm_id': 'osm_id', 'osm_type': 'osm_type', 'place': 'place', 'barrier': 'barrier', 'power': 'power', 'direction': 'direction', 'traffic_signals:sound': 'traffic_signals:sound', 'crossing:markings': 'crossing:markings', 'survey:date': 'survey:date', 'species:en': 'species:en', 'species': 'species', 'natural': 'natural', 'leaf_type': 'leaf_type', 'leaf_cycle': 'leaf_cycle', 'genus:en': 'genus:en', 'genus': 'genus', 'circumference': 'circumference', 'alt_name': 'alt_name', 'name:en': 'name:en', 'ref': 'ref', 'public_transport': 'public_transport', 'operator': 'operator', 'network': 'network', 'bus': 'bus', 'bicycle': 'bicycle', 'name:fr': 'name:fr', 'crossing:island': 'crossing:island', 'is_in': 'is_in', 'noref': 'noref', 'highway': 'highway', 'crossing': 'crossing', 'wikipedia': 'wikipedia', 'wikidata': 'wikidata', 'name': 'name', });
-lyr_WaterMainsLocal_2.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'SUBTYPE': 'SUBTYPE', 'STRUCT_ID': 'STRUCT_ID', 'STRUCT_TYPE': 'STRUCT_TYPE', 'OWNERSHIP': 'OWNERSHIP', 'INSTALL_YEAR': 'INSTALL_YEAR', 'INTERNAL_DIAMETER': 'INTERNAL_DIAMETER', 'MATERIAL': 'MATERIAL', 'LIFE_CYCLE_STATUS': 'LIFE_CYCLE_STATUS', 'Shape_Length': 'Shape_Length', 'Length_Pipe': 'Length_Pipe', 'WIDTH': 'WIDTH', });
-lyr_StormPipesLocal_3.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'SUBTYPE': 'SUBTYPE', 'STRUCT_ID': 'STRUCT_ID', 'STRUCT_TYPE': 'STRUCT_TYPE', 'OWNERSHIP': 'OWNERSHIP', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', 'INVERT_UPSTREAM': 'INVERT_UPSTREAM', 'INVERT_DOWNSTREAM': 'INVERT_DOWNSTREAM', 'FUNCTION': 'FUNCTION', 'LIFE_CYCLE_STATUS': 'LIFE_CYCLE_STATUS', 'Shape_Length': 'Shape_Length', 'LENGTHASBUILT': 'LENGTH_AS_BUILT_1', 'Length_Pipe': 'Length_Pipe', });
-lyr_SanitaryPipesLocal_4.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'SUBTYPE': 'SUBTYPE', 'STRUCT_ID': 'STRUCT_ID', 'STRUCT_TYPE': 'STRUCT_TYPE', 'OWNERSHIP': 'OWNERSHIP', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', 'INVERT_UPSTREAM': 'INVERT_UPSTREAM', 'INVERT_DOWNSTREAM': 'INVERT_DOWNSTREAM', 'FUNCTION': 'FUNCTION', 'LIFE_CYCLE_STATUS': 'LIFE_CYCLE_STATUS', 'Shape_Length': 'Shape_Length', 'LENGTHASBUILT': 'LENGTH_AS_BUILT_1', 'Pipe_Length': 'Pipe_Length', });
-lyr_CombinedPipesLocal_5.set('fieldAliases', {'fid': 'fid', 'OBJECTID': 'OBJECTID', 'SUBTYPE': 'SUBTYPE', 'STRUCT_ID': 'STRUCT_ID', 'STRUCT_TYPE': 'STRUCT_TYPE', 'OWNERSHIP': 'OWNERSHIP', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', 'INVERT_UPSTREAM': 'INVERT_UPSTREAM', 'INVERT_DOWNSTREAM': 'INVERT_DOWNSTREAM', 'FUNCTION': 'FUNCTION', 'LIFE_CYCLE_STATUS': 'LIFE_CYCLE_STATUS', 'Shape_Length': 'Shape_Length', 'LENGTHASBUILT': 'LENGTH_AS_BUILT_1', 'Pipe_Length': 'Pipe_Length', });
-lyr_place_neighbourhood_1.set('fieldImages', {'full_id': 'TextEdit', 'osm_id': 'TextEdit', 'osm_type': 'TextEdit', 'place': 'TextEdit', 'barrier': 'TextEdit', 'power': 'TextEdit', 'direction': 'TextEdit', 'traffic_signals:sound': 'TextEdit', 'crossing:markings': 'TextEdit', 'survey:date': 'TextEdit', 'species:en': 'TextEdit', 'species': 'TextEdit', 'natural': 'TextEdit', 'leaf_type': 'TextEdit', 'leaf_cycle': 'TextEdit', 'genus:en': 'TextEdit', 'genus': 'TextEdit', 'circumference': 'TextEdit', 'alt_name': 'TextEdit', 'name:en': 'TextEdit', 'ref': 'TextEdit', 'public_transport': 'TextEdit', 'operator': 'TextEdit', 'network': 'TextEdit', 'bus': 'TextEdit', 'bicycle': 'TextEdit', 'name:fr': 'TextEdit', 'crossing:island': 'TextEdit', 'is_in': 'TextEdit', 'noref': 'TextEdit', 'highway': 'TextEdit', 'crossing': 'TextEdit', 'wikipedia': 'TextEdit', 'wikidata': 'TextEdit', 'name': 'TextEdit', });
-lyr_WaterMainsLocal_2.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'SUBTYPE': 'TextEdit', 'STRUCT_ID': 'TextEdit', 'STRUCT_TYPE': 'TextEdit', 'OWNERSHIP': 'TextEdit', 'INSTALL_YEAR': 'Range', 'INTERNAL_DIAMETER': 'TextEdit', 'MATERIAL': 'TextEdit', 'LIFE_CYCLE_STATUS': 'TextEdit', 'Shape_Length': 'TextEdit', 'Length_Pipe': 'Range', 'WIDTH': 'Range', });
-lyr_StormPipesLocal_3.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'SUBTYPE': 'TextEdit', 'STRUCT_ID': 'TextEdit', 'STRUCT_TYPE': 'TextEdit', 'OWNERSHIP': 'TextEdit', 'INSTALL_YEAR': 'Range', 'WIDTH': 'Range', 'MATERIAL': 'TextEdit', 'INVERT_UPSTREAM': 'TextEdit', 'INVERT_DOWNSTREAM': 'TextEdit', 'FUNCTION': 'TextEdit', 'LIFE_CYCLE_STATUS': 'TextEdit', 'Shape_Length': 'TextEdit', 'LENGTHASBUILT': 'TextEdit', 'Length_Pipe': 'Range', });
-lyr_SanitaryPipesLocal_4.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'SUBTYPE': 'TextEdit', 'STRUCT_ID': 'TextEdit', 'STRUCT_TYPE': 'TextEdit', 'OWNERSHIP': 'TextEdit', 'INSTALL_YEAR': 'Range', 'WIDTH': 'Range', 'MATERIAL': 'TextEdit', 'INVERT_UPSTREAM': 'TextEdit', 'INVERT_DOWNSTREAM': 'TextEdit', 'FUNCTION': 'TextEdit', 'LIFE_CYCLE_STATUS': 'TextEdit', 'Shape_Length': 'TextEdit', 'LENGTHASBUILT': 'TextEdit', 'Pipe_Length': 'Range', });
-lyr_CombinedPipesLocal_5.set('fieldImages', {'fid': 'TextEdit', 'OBJECTID': 'TextEdit', 'SUBTYPE': 'TextEdit', 'STRUCT_ID': 'TextEdit', 'STRUCT_TYPE': 'TextEdit', 'OWNERSHIP': 'TextEdit', 'INSTALL_YEAR': 'Range', 'WIDTH': 'Range', 'MATERIAL': 'TextEdit', 'INVERT_UPSTREAM': 'TextEdit', 'INVERT_DOWNSTREAM': 'TextEdit', 'FUNCTION': 'TextEdit', 'LIFE_CYCLE_STATUS': 'TextEdit', 'Shape_Length': 'TextEdit', 'LENGTHASBUILT': 'TextEdit', 'Pipe_Length': 'Range', });
-lyr_place_neighbourhood_1.set('fieldLabels', {'full_id': 'no label', 'osm_id': 'no label', 'osm_type': 'no label', 'place': 'no label', 'barrier': 'no label', 'power': 'no label', 'direction': 'no label', 'traffic_signals:sound': 'no label', 'crossing:markings': 'no label', 'survey:date': 'no label', 'species:en': 'no label', 'species': 'no label', 'natural': 'no label', 'leaf_type': 'no label', 'leaf_cycle': 'no label', 'genus:en': 'no label', 'genus': 'no label', 'circumference': 'no label', 'alt_name': 'no label', 'name:en': 'no label', 'ref': 'no label', 'public_transport': 'no label', 'operator': 'no label', 'network': 'no label', 'bus': 'no label', 'bicycle': 'no label', 'name:fr': 'no label', 'crossing:island': 'no label', 'is_in': 'no label', 'noref': 'no label', 'highway': 'no label', 'crossing': 'no label', 'wikipedia': 'no label', 'wikidata': 'no label', 'name': 'no label', });
-lyr_WaterMainsLocal_2.set('fieldLabels', {'fid': 'hidden field', 'OBJECTID': 'hidden field', 'SUBTYPE': 'hidden field', 'STRUCT_ID': 'hidden field', 'STRUCT_TYPE': 'inline label - always visible', 'OWNERSHIP': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'INTERNAL_DIAMETER': 'hidden field', 'MATERIAL': 'inline label - visible with data', 'LIFE_CYCLE_STATUS': 'hidden field', 'Shape_Length': 'hidden field', 'Length_Pipe': 'hidden field', 'WIDTH': 'inline label - always visible', });
-lyr_StormPipesLocal_3.set('fieldLabels', {'fid': 'hidden field', 'OBJECTID': 'hidden field', 'SUBTYPE': 'hidden field', 'STRUCT_ID': 'hidden field', 'STRUCT_TYPE': 'inline label - always visible', 'OWNERSHIP': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'WIDTH': 'inline label - always visible', 'MATERIAL': 'inline label - visible with data', 'INVERT_UPSTREAM': 'hidden field', 'INVERT_DOWNSTREAM': 'hidden field', 'FUNCTION': 'hidden field', 'LIFE_CYCLE_STATUS': 'hidden field', 'Shape_Length': 'hidden field', 'LENGTHASBUILT': 'hidden field', 'Length_Pipe': 'hidden field', });
-lyr_SanitaryPipesLocal_4.set('fieldLabels', {'fid': 'hidden field', 'OBJECTID': 'hidden field', 'SUBTYPE': 'inline label - always visible', 'STRUCT_ID': 'hidden field', 'STRUCT_TYPE': 'hidden field', 'OWNERSHIP': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'WIDTH': 'inline label - always visible', 'MATERIAL': 'inline label - visible with data', 'INVERT_UPSTREAM': 'hidden field', 'INVERT_DOWNSTREAM': 'hidden field', 'FUNCTION': 'hidden field', 'LIFE_CYCLE_STATUS': 'hidden field', 'Shape_Length': 'hidden field', 'LENGTHASBUILT': 'hidden field', 'Pipe_Length': 'hidden field', });
-lyr_CombinedPipesLocal_5.set('fieldLabels', {'fid': 'hidden field', 'OBJECTID': 'hidden field', 'SUBTYPE': 'hidden field', 'STRUCT_ID': 'hidden field', 'STRUCT_TYPE': 'inline label - always visible', 'OWNERSHIP': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'WIDTH': 'inline label - always visible', 'MATERIAL': 'inline label - visible with data', 'INVERT_UPSTREAM': 'hidden field', 'INVERT_DOWNSTREAM': 'hidden field', 'FUNCTION': 'hidden field', 'LIFE_CYCLE_STATUS': 'hidden field', 'Shape_Length': 'hidden field', 'LENGTHASBUILT': 'hidden field', 'Pipe_Length': 'hidden field', });
-lyr_CombinedPipesLocal_5.on('precompose', function(evt) {
+lyr_Positronnolabels_0.setVisible(true);lyr_DarkMatternolabels_1.setVisible(true);lyr_place_neighbourhood_2.setVisible(true);lyr_Simple_Reduced_WaterMainsLocal_3.setVisible(true);lyr_Simple_Reduced_StormPipesLocal_4.setVisible(true);lyr_Simple_Reduced_SanitaryPipesLocal_5.setVisible(true);lyr_Simple_Reduced_CombinedPipesLocal_6.setVisible(true);
+var layersList = [lyr_Positronnolabels_0,lyr_DarkMatternolabels_1,lyr_place_neighbourhood_2,lyr_Simple_Reduced_WaterMainsLocal_3,lyr_Simple_Reduced_StormPipesLocal_4,lyr_Simple_Reduced_SanitaryPipesLocal_5,lyr_Simple_Reduced_CombinedPipesLocal_6];
+lyr_place_neighbourhood_2.set('fieldAliases', {'full_id': 'full_id', 'osm_id': 'osm_id', 'osm_type': 'osm_type', 'place': 'place', 'barrier': 'barrier', 'power': 'power', 'direction': 'direction', 'traffic_signals:sound': 'traffic_signals:sound', 'crossing:markings': 'crossing:markings', 'survey:date': 'survey:date', 'species:en': 'species:en', 'species': 'species', 'natural': 'natural', 'leaf_type': 'leaf_type', 'leaf_cycle': 'leaf_cycle', 'genus:en': 'genus:en', 'genus': 'genus', 'circumference': 'circumference', 'alt_name': 'alt_name', 'name:en': 'name:en', 'ref': 'ref', 'public_transport': 'public_transport', 'operator': 'operator', 'network': 'network', 'bus': 'bus', 'bicycle': 'bicycle', 'name:fr': 'name:fr', 'crossing:island': 'crossing:island', 'is_in': 'is_in', 'noref': 'noref', 'highway': 'highway', 'crossing': 'crossing', 'wikipedia': 'wikipedia', 'wikidata': 'wikidata', 'name': 'name', });
+lyr_Simple_Reduced_WaterMainsLocal_3.set('fieldAliases', {'fid': 'fid', 'INSTALL_YEAR': 'INSTALL_YEAR', 'MATERIAL': 'MATERIAL', 'WIDTH': 'WIDTH', });
+lyr_Simple_Reduced_StormPipesLocal_4.set('fieldAliases', {'fid': 'fid', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', });
+lyr_Simple_Reduced_SanitaryPipesLocal_5.set('fieldAliases', {'fid': 'fid', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', });
+lyr_Simple_Reduced_CombinedPipesLocal_6.set('fieldAliases', {'fid': 'fid', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', });
+lyr_place_neighbourhood_2.set('fieldImages', {'full_id': 'TextEdit', 'osm_id': 'TextEdit', 'osm_type': 'TextEdit', 'place': 'TextEdit', 'barrier': 'TextEdit', 'power': 'TextEdit', 'direction': 'TextEdit', 'traffic_signals:sound': 'TextEdit', 'crossing:markings': 'TextEdit', 'survey:date': 'TextEdit', 'species:en': 'TextEdit', 'species': 'TextEdit', 'natural': 'TextEdit', 'leaf_type': 'TextEdit', 'leaf_cycle': 'TextEdit', 'genus:en': 'TextEdit', 'genus': 'TextEdit', 'circumference': 'TextEdit', 'alt_name': 'TextEdit', 'name:en': 'TextEdit', 'ref': 'TextEdit', 'public_transport': 'TextEdit', 'operator': 'TextEdit', 'network': 'TextEdit', 'bus': 'TextEdit', 'bicycle': 'TextEdit', 'name:fr': 'TextEdit', 'crossing:island': 'TextEdit', 'is_in': 'TextEdit', 'noref': 'TextEdit', 'highway': 'TextEdit', 'crossing': 'TextEdit', 'wikipedia': 'TextEdit', 'wikidata': 'TextEdit', 'name': 'TextEdit', });
+lyr_Simple_Reduced_WaterMainsLocal_3.set('fieldImages', {'fid': 'TextEdit', 'INSTALL_YEAR': 'Range', 'MATERIAL': 'TextEdit', 'WIDTH': 'Range', });
+lyr_Simple_Reduced_StormPipesLocal_4.set('fieldImages', {'fid': 'TextEdit', 'INSTALL_YEAR': 'Range', 'WIDTH': 'Range', 'MATERIAL': 'TextEdit', });
+lyr_Simple_Reduced_SanitaryPipesLocal_5.set('fieldImages', {'fid': 'TextEdit', 'INSTALL_YEAR': 'Range', 'WIDTH': 'Range', 'MATERIAL': 'TextEdit', });
+lyr_Simple_Reduced_CombinedPipesLocal_6.set('fieldImages', {'fid': 'TextEdit', 'INSTALL_YEAR': 'Range', 'WIDTH': 'Range', 'MATERIAL': 'TextEdit', });
+lyr_place_neighbourhood_2.set('fieldLabels', {'full_id': 'inline label - always visible', 'osm_id': 'inline label - always visible', 'osm_type': 'inline label - always visible', 'place': 'inline label - always visible', 'barrier': 'inline label - always visible', 'power': 'inline label - always visible', 'direction': 'inline label - always visible', 'traffic_signals:sound': 'inline label - always visible', 'crossing:markings': 'inline label - always visible', 'survey:date': 'inline label - always visible', 'species:en': 'inline label - always visible', 'species': 'inline label - always visible', 'natural': 'inline label - always visible', 'leaf_type': 'inline label - always visible', 'leaf_cycle': 'inline label - always visible', 'genus:en': 'inline label - always visible', 'genus': 'inline label - always visible', 'circumference': 'inline label - always visible', 'alt_name': 'inline label - always visible', 'name:en': 'inline label - always visible', 'ref': 'inline label - always visible', 'public_transport': 'inline label - always visible', 'operator': 'inline label - always visible', 'network': 'inline label - always visible', 'bus': 'inline label - always visible', 'bicycle': 'inline label - always visible', 'name:fr': 'inline label - always visible', 'crossing:island': 'inline label - always visible', 'is_in': 'inline label - always visible', 'noref': 'inline label - always visible', 'highway': 'inline label - always visible', 'crossing': 'inline label - always visible', 'wikipedia': 'inline label - always visible', 'wikidata': 'inline label - always visible', 'name': 'inline label - always visible', });
+lyr_Simple_Reduced_WaterMainsLocal_3.set('fieldLabels', {'fid': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'MATERIAL': 'inline label - always visible', 'WIDTH': 'inline label - always visible', });
+lyr_Simple_Reduced_StormPipesLocal_4.set('fieldLabels', {'fid': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'WIDTH': 'inline label - always visible', 'MATERIAL': 'inline label - always visible', });
+lyr_Simple_Reduced_SanitaryPipesLocal_5.set('fieldLabels', {'fid': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'WIDTH': 'inline label - always visible', 'MATERIAL': 'inline label - always visible', });
+lyr_Simple_Reduced_CombinedPipesLocal_6.set('fieldLabels', {'fid': 'hidden field', 'INSTALL_YEAR': 'inline label - always visible', 'WIDTH': 'inline label - always visible', 'MATERIAL': 'inline label - always visible', });
+lyr_Simple_Reduced_CombinedPipesLocal_6.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
