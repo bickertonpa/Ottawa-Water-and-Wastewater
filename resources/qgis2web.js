@@ -4,20 +4,13 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [-8433272, 5680971, -8417977, 5691356], maxZoom: 18, minZoom: 13
+        extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789], maxZoom: 18, minZoom: 13
     })
 });
-
--8430613.0,5689622.2
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
 map.getView().fit([-8433272, 5680971, -8417977, 5691356], map.getSize());
 
-
--8433272,5680971
--8417977,5691356
-
-//-8465304.2598999999463558,5646702.2625000001862645 : -8384483.9835999999195337,5701503.8047000002115965
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
