@@ -8,7 +8,7 @@ var style_Simple_Reduced_SanitaryPipesLocal_5 = function(feature, resolution){
     };
     
     var labelText = ""; 
-    var value = feature.get("INSTALL_YEAR");
+    var value = feature.get("INSTALL_YEAR").toString();
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
