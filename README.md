@@ -34,6 +34,8 @@ This web map is provided for informational and visualization purposes only. It i
 
 🙌 Acknowledgements
 
+Data cleaning  - [It's Jamie](https://bsky.app/profile/sjamieit.bsky.social)
+
 City of Ottawa – Open Data
 
 QGIS Development Team
