@@ -137,7 +137,7 @@ var lyr_WaterMains_6 = new ol.layer.Vector({
     <img src="styles/legend/WaterMains_6_9.png" /> 2010 - 2020<br />\
     <img src="styles/legend/WaterMains_6_10.png" /> 2020 - 2023<br />' });
 
-lyr_GoogleHybrid_0.setVisible(false);lyr_DarkMatter_1.setVisible(true);lyr_Positron_2.setVisible(false);lyr_StormPipes_3.setVisible(true);lyr_SanitaryPipes_4.setVisible(true);lyr_CombinedPipes_5.setVisible(true);lyr_WaterMains_6.setVisible(true);
+lyr_GoogleHybrid_0.setVisible(true);lyr_DarkMatter_1.setVisible(false);lyr_Positron_2.setVisible(false);lyr_StormPipes_3.setVisible(true);lyr_SanitaryPipes_4.setVisible(true);lyr_CombinedPipes_5.setVisible(true);lyr_WaterMains_6.setVisible(true);
 var layersList = [lyr_GoogleHybrid_0,lyr_DarkMatter_1,lyr_Positron_2,lyr_StormPipes_3,lyr_SanitaryPipes_4,lyr_CombinedPipes_5,lyr_WaterMains_6];
 lyr_StormPipes_3.set('fieldAliases', {'fid': 'fid', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', });
 lyr_SanitaryPipes_4.set('fieldAliases', {'fid': 'fid', 'INSTALL_YEAR': 'INSTALL_YEAR', 'WIDTH': 'WIDTH', 'MATERIAL': 'MATERIAL', });
